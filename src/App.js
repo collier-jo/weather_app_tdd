@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from "./components/title"
 
 function App() {
 
@@ -6,14 +7,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <title>Weather App</title>
-        <h1 id="title">Weather App</h1>
+        <Title />
       </header>
       <main>
         
       </main>
-
-      
     </div>
   );
 }

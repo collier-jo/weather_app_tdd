@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App';
-import { mount } from 'enzyme';
+import { mount,  } from 'enzyme';
 
 describe("Weather app", () => {
 
@@ -11,6 +11,6 @@ describe("Weather app", () => {
   });
   
   test('renders title', () => {
-    expect(wrapper.find("#title").text()).toContain("Weather App")
+    expect(wrapper.find("#title").text()).toContain("Weather Finder")
   });
 });
