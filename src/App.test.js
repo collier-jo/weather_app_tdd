@@ -1,9 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import App from './App';
+import { mount } from 'enzyme';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("Weather app", () => {
+
+  let wrapper 
+
+  beforeEach(() => {
+    wrapper = mount(<App />)
+  });
+  
+  test('renders title', () => {
+    expect(wrapper.find("#title").text()).toContain("Weather App")
+  });
 });
