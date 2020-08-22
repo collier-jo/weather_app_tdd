@@ -1,5 +1,6 @@
 import React from 'react';
 import Title from "./components/title"
+import Form from "./components/form"
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
         <Title />
       </header>
       <main>
-        
+        < Form/>
       </main>
     </div>
   );
