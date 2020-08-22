@@ -4,7 +4,7 @@ function Form (){
 
   return(
     <div>
-      <h2 id="form">Form Component</h2>
+      <h2 id="formTitle">Form Component</h2>
     </div>
   )
     

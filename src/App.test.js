@@ -15,6 +15,10 @@ describe("Weather app", () => {
   });
 
   test('renders title', () => {
-    expect(wrapper.find("#form").text()).toContain("Form Component")
+    expect(wrapper.find("#formTitle").text()).toContain("Form Component")
+  });
+
+  test('renders title', () => {
+    expect(wrapper.find("#weatherTitle").text()).toContain("Weather Component")
   });
 });

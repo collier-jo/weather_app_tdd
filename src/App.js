@@ -1,6 +1,7 @@
 import React from 'react';
 import Title from "./components/title"
 import Form from "./components/form"
+import Weather from "./components/weather"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       </header>
       <main>
         < Form/>
+        < Weather/>
       </main>
     </div>
   );
