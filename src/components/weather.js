@@ -5,7 +5,7 @@ function Weather (props){
   return(
     <div>
       <h2 id="weatherTitle">Weather Component</h2>
-      <div >
+      <div id="weather-info">
         <p id="temp-info">{props.temp}</p> 
         <p>{props.city}</p> 
         <p>{props.country}</p> 

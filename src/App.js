@@ -19,10 +19,6 @@ function App() {
   const fetchWeather = (e, city, country) => {
     e.preventDefault();
 
-    // const city = e.target.elements.city.value;
-    // const country = e.target.elements.country.value;
-
-    
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`)
     .then((response) => response.json())
     .then((data) => {
@@ -33,9 +29,7 @@ function App() {
       setDescription(data.weather[0].description)
       setError("")
       console.log(data)
-    }).catch(error => console.log('Request failed:', error));
-
-    
+    }).catch(error => console.log('Request failed:', error));  
   }
 
   return (
