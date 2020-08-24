@@ -29,7 +29,12 @@ describe("Weather app", () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  
+  describe("Form", () =>{
+    test("testing fetchWeather", () =>{
+
+    })
+  })
+   
   
   describe("Title", () =>{
     test('renders title', () => {
@@ -105,11 +110,8 @@ describe("Weather app", () => {
       });
 
       expect(global.fetch).toHaveBeenCalledWith(`https://api.openweathermap.org/data/2.5/weather?q=London,UK&appid=53e8db7883d46c11daee344d54297d3c&units=metric`)
-    });
+    });  
   });
-
-  
-
 });
 
 // test('submits username and password', () => {

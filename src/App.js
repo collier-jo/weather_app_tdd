@@ -22,13 +22,24 @@ function App() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`)
     .then((response) => response.json())
     .then((data) => {
-      setTemp(data.main.temp)
-      setCity(data.name)
-      setCountry(data.sys.country)
-      setHumidity(data.main.humidity)
-      setDescription(data.weather[0].description)
-      setError("")
-      console.log(data)
+      if(city && country){
+        setTemp(data.main.temp)
+        setCity(data.name)
+        setCountry(data.sys.country)
+        setHumidity(data.main.humidity)
+        setDescription(data.weather[0].description)
+        setError("")
+        console.log(data)
+      } else {
+        setTemp(undefined)
+        setCity(undefined)
+        setCountry(undefined)
+        setHumidity(undefined)
+        setDescription(undefined)
+        setError("Please enter location values.")
+        console.log(data)
+
+      }
     }).catch(error => console.log('Request failed:', error));  
   }
 
