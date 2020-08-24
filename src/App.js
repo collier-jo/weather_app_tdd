@@ -2,6 +2,7 @@ import React from 'react';
 import Title from "./components/title"
 import Form from "./components/form"
 import Weather from "./components/weather"
+import "./App.css";
 
 const API_KEY = "53e8db7883d46c11daee344d54297d3c"
 // api.openweathermap.org/data/2.5/weather?q={cityName},{countryName}&appid={API_KEY}&units=metric
@@ -38,27 +39,36 @@ function App() {
         setDescription(undefined)
         setError("Please enter location values.")
         console.log(data)
-
       }
     }).catch(error => console.log('Request failed:', error));  
   }
 
   return (
     <div className="App">
-      <header>
-        <Title />
-      </header>
-      <main>
-        < Form fetchWeather={fetchWeather}/>
-        < Weather 
-          temp={temp}
-          city={city}
-          country={country}
-          humidity={humidity}
-          description={description}
-          error={error}
-        />
-      </main>
+      <div className='wrapper'>
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className='col-xs-5 title-container'>
+                <Title />
+              </div>
+              <div className='col-xs-7 form-container'>
+                <main>
+                  < Form fetchWeather={fetchWeather}/>
+                  < Weather 
+                    temp={temp}
+                    city={city}
+                    country={country}
+                    humidity={humidity}
+                    description={description}
+                    error={error}
+                  />
+                </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>         
     </div>
   );
 }

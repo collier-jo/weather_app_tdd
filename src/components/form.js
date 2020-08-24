@@ -27,13 +27,13 @@ function Form (props){
 
   return(
     <div>
-      <h2 id="formTitle">Form Component</h2>
       <form id="weather-form" onSubmit={submitForm}>
         <input id="city-name-input" type="text" name="city" placeholder="City.." value={city} onChange={updateCityField}></input>
         <input id="country-name-input" type="text" name="country" placeholder="Country.." value={country} onChange={updateCountryField}></input>
         <button id="submit-weather-form">Get Weather</button>
+        <button id="resetButton" onClick={cancelCourse}>Reset</button>
+
       </form>
-      <button id="resetButton" onClick={cancelCourse}>Reset</button>
 
     </div>
   )

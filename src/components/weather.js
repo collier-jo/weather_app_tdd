@@ -4,13 +4,32 @@ function Weather (props){
 
   return(
     <div>
-      <h2 id="weatherTitle">Weather Component</h2>
-      <div id="weather-info">
-        { props.city && props.country && <p>Location: {props.city}, {props.country }</p>}
-        { props.temp && <p>Temperature: {props.temp}</p> }       
-        { props.humidity && <p>Humidity: {props.humidity}</p> }       
-        { props.description && <p>Description: {props.description}</p> }
-        { props.error && <p>{props.error}</p> }
+      <div id="weather-info" className="weather-info">
+        { 
+        props.city && props.country && <p className="weather__key">Location:  
+          <span className="weather__value"> { props.city}, {props.country }</span>
+         </p>
+        }
+        { 
+        props.temp && <p className="weather__key">Temperature: 
+            <span className="weather__value"> {props.temp}</span>
+          </p> 
+        }       
+        { 
+        props.humidity && <p className="weather__key">Humidity: 
+            <span className="weather__value"> {props.humidity}</span>
+          </p> 
+        }       
+        { 
+        props.description && <p className="weather__key">Description: 
+            <span className="weather__value"> {props.description}</span>
+          </p> 
+        }
+        { 
+        props.error && <p className="weather__error">
+            <span>{props.error}</span>
+          </p> 
+        }
       </div>
 
     </div>
